@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Class Kanah</title>
+    <link rel="stylesheet" href="Style.css">   
+</head>
+    <link rel="shortcut icon" href="images/favicon.jpg">
+
+    <!--ICONSCOUT-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <!--Swepeerjs-->
+        <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!--Font gogel-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,900;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="container nav__container hidden">
+            <a href="#">Class Kanah</a>
+            <ul class="nav__menu hidden">
+                <li><a href="index.html" class="nav_link" id="home">Home</a></li>
+                <li><a href="About.html" class="nav_link" id="about">About</a></li>
+                <li><a href="Courses.html" class="nav_link" id="courses">Courses</a></li>
+                <li><a href="contact.html" class="nav_link active" id="contact">Contact</a></li>
+            </ul>            
+            <button id="open-menu-btn"><i class="uil uil-bars hidden"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply hidden"></i></button>
+ 
+        </div>
+    </nav>
+    <!--END NAVBAR-->
+
+    <section class="contact">
+
+        <div class="container contact__container">
+
+            <aside class="contact__aside hidden">
+
+                <div class="aside__image">
+                    <img src="./images/contact.svg">
+                </div>
+
+                <h2>Contact Us</h2>
+                <p>
+                    Hubungi kami untuk informasi lebih lanjut atau pertanyaan dengan menghubungi personel kami yang ramah dan siap membantu.
+                </p>
+                
+                <ul class="contact__details">
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>pt.abcd@gmail.com</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-phone"></i>
+                        <h5>(022) 73516650</h5>
+                    </li>
+                    <li>
+                        <i class="uil uil-instagram"></i>
+                        <h5>abcd_id</h5>
+                    </li>
+                </ul>
+
+                <ul class="contact__socials">
+                    <li><a href="#"><i class="uil uil-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="uil uil-instagram"></i></a></li>
+                    <li><a href="#"><i class="uil uil-linkedin"></i></a></li>
+                    <li><a href="#"><i class="uil uil-envelope"></i></a></li>
+                </ul>
+            </aside>
+
+            <form action="https://formspree.io/f/mgeqrvbp" method="post" class="contact__form hidden">
+                <div class="form__name">
+                    <input type="text" name="First Name" placeholder="First Name" required>
+                    <input type="text" name="Last Name" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="Email Address" placeholder="Email you" required>
+                <textarea name="Message" rows="7" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-primary">send</button>
+            </form>
+        </div>
+    </section>
+
+     <!--Footer-->
+     <footer>
+
+        <div class="container footer__container">
+
+            <div class="footer__1 hidden">
+                <a href="#" class="footer__logo hidden">
+                    <h4>Class Kanah</h4>
+                </a>
+                <p>
+                    Mari belajar bersama dan 
+                    tingkatkan pengetahuan teknologi Anda!
+                </p>
+            </div>
+
+            <div class="footer__2 hidden">
+                <h4>Class Kanah</h4>
+                <ul class="permalinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Course</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__3 hidden">
+                <h4>About Kanah</h4>
+                <ul class="privacy">
+                    <li><a href="#">Dowload App Kanah</a></li>
+                    <li><a href="#">Term an dondisi</a></li>
+                    <li><a href="#">Refund policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__4 hidden">
+                <h4>Contact us</h4>
+                
+                <div>
+                    <p>(022) 73516650</p>
+                    <p>pt.abcd@gmail.com</p>
+                </div>
+
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li> 
+                </ul>
+
+            </div>
+
+        </div>
+         <div class="footer__copyright hidden">
+            <small>Copyright &copy; 2024 Kanah. Hak Cipta Hanya Milik Allah </small> 
+         </div>
+
+    </footer>
+    <!--End Footer-->
+
+    <!--Main js-->
+    <script src="main.js"></script>
+
+</body>
+</html>
