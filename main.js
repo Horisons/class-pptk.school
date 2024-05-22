@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
           title: 'Pengembangan Aplikasi Android',
           description: 'Panduan langkah demi langkah untuk menguasai pengembangan aplikasi Android, mulai dari instalasi hingga implementasi fitur-fitur canggih.',
           category: 'mobile',
-          image: './images/coursemobile.jpg'
+          image: './images/uiux3.jpg'
       },
       {
           title: 'Aplikasi Mobile Menggunakan Flutter',
@@ -209,102 +209,112 @@ document.addEventListener('DOMContentLoaded', () => {
           title: 'Website Apps 2',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/courseweb.png'
+          image: './images/100.jpg'
       },
       
       {
           title: 'Website Apps 4',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/courseweb.png'
+          image: './images/107.jpg'
       },
       
       {
           title: 'Website Apss 3',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/courseweb.png'
+          image: './images/103.jpg'
       },
       
       {
           title: 'web stry',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/courseweb.png'
+          image: './images/107.jpg'
       },
       
       {
           title: 'Mobile',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/coursemobile.jpg'
+          image: './images/uiux3.jpg'
       },
       
       {
           title: 'Media Server Apps 1',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'server',
-          image: './images/courseserver.jpg'
+          image: './images/303.jpg'
       },
       
       {
           title: 'Media Server Apps 2',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'server',
-          image: './images/courseserver.jpg'
+          image: './images/305.jpg'
       },
       
       {
           title: 'Media Server Apps 3',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'server',
-          image: './images/courseserver.jpg'
+          image: './images/304.jpg'
       },
       
       {
           title: 'Media Server Apps 4',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'server',
-          image: './images/courseserver.jpg'
+          image: './images/302.jpg'
       },
       
       {
-          title: 'Mobile 1',
-          description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
-          category: 'web',
-          image: './images/coursemobile.jpg'
-      },
-      
-      {
-          title: 'Mobile 2',
+          title: 'Mobile Apps Perabotan',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/coursemobile.jpg'
+          image: './images/uiux5.jpg'
       },
       
       {
-          title: 'Mobile 3',
+          title: 'Mobile Apps',
           description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
           category: 'mobile',
-          image: './images/coursemobile.jpg'
+          image: './images/uiux1.jpg'
+      },
+      
+      {
+          title: 'Mobile Apps',
+          description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
+          category: 'mobile',
+          image: './images/uiux3.jpg'
       },
 
       {
-        title: 'Mobile 4',
+        title: 'Mobile Apps',
         description: 'Merancang dan mengembangkan aplikasi seluler yang inovatif dan responsif dengan bimbingan ahli di industri teknologi.',
         category: 'mobile',
-        image: './images/coursemobile.jpg'
+        image: './images/uiux4.jpg'
       },
       
       
   ];
 
-  var coursesContainer = document.getElementById('coursesContainer');
+var coursesContainer = document.getElementById('coursesContainer');
 var showMoreButton = document.querySelector('.btn-filter[onclick="showMore()"]');
 var showLessButton = document.querySelector('.btn-filter[onclick="showLess()"]');
 var addedCourses = []; // Menyimpan informasi artikel yang ditambahkan
 var currentIndex = 0;
 var batchSize = 3;
+
+// Loop melalui array coursesData
+for (var i = 0; i < coursesData.length; i++) {
+    // Periksa apakah kategori adalah 'web'
+    if (coursesData[i].category === 'web') {
+        // Jika kategori adalah 'web', ubah nilai properti image
+        // Sesuaikan nomor gambar dengan konten tentang website
+        coursesData[i].image = './images/' + (i + 100) + '.jpg';
+    }
+}
 
 function createCourse(title, description, category, imageSrc) {
     var article = document.createElement('article');
@@ -377,6 +387,27 @@ function showMore() {
 function showLess() {
     resetCourses();
 }
+// Get the button
+let mybutton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+mybutton.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
 
 
 

@@ -1185,3 +1185,38 @@ input, textarea{
         width: 100%;
     }
 }
+
+/* Style untuk tombol page to top */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    color: #000;
+    border: none;
+    border-radius: 50%; /* Bentuk lingkaran */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000; /* Agar tombol tetap di atas elemen lainnya */
+    transform: rotate(45deg); /* Memutar elemen 45 derajat untuk membuat belah ketupat */
+    display: none; /* Sembunyikan tombol secara default */
+}
+
+/* Efek hover */
+#topBtn:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    transform: rotate(0deg) scale(1.1); /* Mengembalikan rotasi ke 0 derajat dan memperbesar elemen */
+}
+
+/* Menormalkan rotasi anak elemen dalam belah ketupat */
+#topBtn i {
+    transform: rotate(-45deg);
+}
+
+
